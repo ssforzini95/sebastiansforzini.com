@@ -1,35 +1,38 @@
 @import './base.css';
 
-#app {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-
-  font-weight: normal;
+#web_logo {
+    width: 40%;
 }
 
-a,
-.green {
-  text-decoration: none;
-  color: hsla(160, 100%, 37%, 1);
-  transition: 0.4s;
+.scroller::-webkit-scrollbar {
+    width: 8px;
 }
 
-@media (hover: hover) {
-  a:hover {
-    background-color: hsla(160, 100%, 37%, 0.2);
-  }
+.scroller::-webkit-scrollbar-track {
+    background: white;
 }
 
-@media (min-width: 1024px) {
-  body {
-    display: flex;
-    place-items: center;
-  }
+.scroller::-webkit-scrollbar-thumb {
+    background: #7f7f7f;
+    border-right: 1px solid white;
+}
 
-  #app {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    padding: 0 2rem;
-  }
+/*Scrollbar Size*/
+::-webkit-scrollbar {
+    width: 12px;
+}
+
+/*Scrollbar - Background Color*/
+::-webkit-scrollbar-track {
+    background: #F4EBDB;
+}
+
+/*Scrollbar - Color*/
+::-webkit-scrollbar-thumb {
+    background: #2C4A52;
+}
+
+/*Scrollbar - Hover Color*/
+::-webkit-scrollbar-thumb:hover {
+    background: #537072;
 }
