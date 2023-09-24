@@ -3,7 +3,7 @@
     <div>
         <b-navbar toggleable="lg" variant="light" class="mt-2">
             <b-navbar-brand href="#">
-                <b-img src="/src/assets/SS_Logo1.png" id="web_logo" fluid alt="Logo"></b-img>
+                <b-img src="/SS_Logo1.png" id="web_logo" fluid alt="Logo"></b-img>
             </b-navbar-brand>
 
             <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
@@ -39,9 +39,13 @@
         background-color: white !important;
     }
 
+    .navbar-brand {
+        width: 15%;
+    }
+
     @media only screen and (max-width: 1182px) {
         .navbar-brand {
-            width: 39%;
+            width: 20%;
         }
     }
 
@@ -58,13 +62,13 @@
 
         .navbar-brand {
             margin-left: 1rem;
-            width: auto;
+            width: 30%;
         }
     }
 
     @media only screen and (max-width: 690px) {
-        .navbar {
-            display: inline-table;
+        .navbar-brand {
+            width: 40%;
         }
 
         .navbar-toggler {
