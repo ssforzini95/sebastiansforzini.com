@@ -1,35 +1,47 @@
 @import './base.css';
 
-#app {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-
-  font-weight: normal;
+html {
+    scroll-behavior: smooth;
 }
 
-a,
-.green {
-  text-decoration: none;
-  color: hsla(160, 100%, 37%, 1);
-  transition: 0.4s;
+#web_logo {
+    width: 100%;
 }
 
-@media (hover: hover) {
-  a:hover {
-    background-color: hsla(160, 100%, 37%, 0.2);
-  }
+.scroller::-webkit-scrollbar {
+    width: 8px;
 }
 
-@media (min-width: 1024px) {
-  body {
-    display: flex;
-    place-items: center;
-  }
+.scroller::-webkit-scrollbar-track {
+    background: white;
+}
 
-  #app {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    padding: 0 2rem;
-  }
+.scroller::-webkit-scrollbar-thumb {
+    background: #7f7f7f;
+    border-right: 1px solid white;
+}
+
+/*Scrollbar Size*/
+::-webkit-scrollbar {
+    width: 12px;
+}
+
+/*Scrollbar - Background Color*/
+::-webkit-scrollbar-track {
+    background: #F4EBDB;
+}
+
+/*Scrollbar - Color*/
+::-webkit-scrollbar-thumb {
+    background: #2C4A52;
+}
+
+/*Scrollbar - Hover Color*/
+::-webkit-scrollbar-thumb:hover {
+    background: #537072;
+}
+
+section {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
 }
