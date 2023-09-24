@@ -3,16 +3,13 @@
     import HelloWorld from './components/HelloWorld.vue'
     import NavHeader from "./components/NavHeader.vue";
     import Footer from "./components/Footer.vue";
+    import AboutMe from "./components/AboutMe.vue";
 </script>
 
 <template>
-    <header>
-        <NavHeader></NavHeader>
-    </header>
-
-    <footer>
-        <Footer></Footer>
-    </footer>
+    <NavHeader></NavHeader>
+    <AboutMe id="about"></AboutMe>
+    <Footer></Footer>
 </template>
 
 <style scoped>

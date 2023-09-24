@@ -1,5 +1,9 @@
 @import './base.css';
 
+html {
+    scroll-behavior: smooth;
+}
+
 #web_logo {
     width: 100%;
 }
@@ -35,4 +39,9 @@
 /*Scrollbar - Hover Color*/
 ::-webkit-scrollbar-thumb:hover {
     background: #537072;
+}
+
+section {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
 }

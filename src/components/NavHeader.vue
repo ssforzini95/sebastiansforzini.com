@@ -1,6 +1,6 @@
 <template>
 
-    <div>
+    <header>
         <b-navbar toggleable="lg" variant="light" class="mt-2">
             <b-navbar-brand href="#">
                 <b-img src="/SS_Logo1.png" id="web_logo" fluid alt="Logo"></b-img>
@@ -10,7 +10,7 @@
 
             <b-collapse id="nav-collapse" is-nav class="header-align">
                 <b-navbar-nav>
-                    <b-nav-item href="#">About Me</b-nav-item>
+                    <b-nav-item href="#about">About Me</b-nav-item>
                     <b-nav-item href="#">Skills</b-nav-item>
                     <b-nav-item href="#">Career</b-nav-item>
                     <b-nav-item href="#">Testimonials</b-nav-item>
@@ -18,7 +18,7 @@
                 </b-navbar-nav>
             </b-collapse>
         </b-navbar>
-    </div>
+    </header>
 </template>
 
 <style scoped>
