@@ -4,7 +4,7 @@
 
 <template>
 
-    <div>
+    <footer>
 
         <b-row class="dark-bg">
             <b-col>Copyright ® All rights reserved</b-col>
@@ -14,7 +14,7 @@
             </b-col>
         </b-row>
 
-    </div>
+    </footer>
 
 </template>
 
