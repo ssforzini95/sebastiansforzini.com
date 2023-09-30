@@ -1,6 +1,6 @@
 <template>
 
-    <header>
+    <div>
         <b-navbar toggleable="lg" variant="light" class="mt-2">
             <b-navbar-brand href="#">
                 <b-img src="/SS_Logo1.png" id="web_logo" fluid alt="Logo"></b-img>
@@ -18,7 +18,7 @@
                 </b-navbar-nav>
             </b-collapse>
         </b-navbar>
-    </header>
+    </div>
 </template>
 
 <style scoped>
