@@ -13,7 +13,7 @@
                     <b-nav-item href="#about">About Me</b-nav-item>
                     <b-nav-item href="#">Skills</b-nav-item>
                     <b-nav-item href="#">Career</b-nav-item>
-                    <b-nav-item href="#">Testimonials</b-nav-item>
+                    <b-nav-item href="#testimonial">Testimonials</b-nav-item>
                     <b-nav-item href="#">Contact</b-nav-item>
                 </b-navbar-nav>
             </b-collapse>
