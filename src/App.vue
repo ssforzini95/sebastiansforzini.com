@@ -1,10 +1,10 @@
 <script setup>
     import { RouterLink, RouterView } from 'vue-router'
-    import HelloWorld from './components/HelloWorld.vue'
     import NavHeader from "./components/NavHeader.vue";
     import Footer from "./components/Footer.vue";
     import AboutMe from "./components/AboutMe.vue";
     import Banner from "./components/Banner.vue";
+    import Testimonial from "./components/Testimonial.vue";
 </script>
 
 <template>
@@ -13,6 +13,7 @@
         <Banner></Banner>
     </header>
     <AboutMe id="about"></AboutMe>
+    <Testimonial></Testimonial>
     <Footer></Footer>
 </template>
 
