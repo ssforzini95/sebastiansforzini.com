@@ -148,4 +148,46 @@
         }
     }
 
+    @media only screen and (max-width: 991px) {
+        .banner-img {
+            height: 30rem;
+        }
+
+        .typingEffect {
+            font-size: 0.7rem;
+        }
+    }
+
+    @media only screen and (max-width: 690px) {
+        .banner-img {
+            height: 25rem;
+        }
+
+        .typingEffect {
+            max-width: 45%;
+        }
+    }
+
+    @media only screen and (max-width: 522px) {
+        .typingEffect {
+            max-width: 55%;
+        }
+    }
+
+    @media only screen and (max-width: 415px) {
+        .typingEffect {
+            max-width: 100%;
+            position: initial;
+            border-radius: 0 !important;
+        }
+
+        .banner-row {
+            flex-direction: column-reverse;
+        }
+
+        .banner-img {
+            height: 20rem;
+        }
+    }
+
 </style>
