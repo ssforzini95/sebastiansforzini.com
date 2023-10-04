@@ -17,5 +17,9 @@ export default defineConfig({
     server: {
         port: 8080,
         hot: true
+    },
+    scripts: {
+        build: "vite build",
+        preview: "vite preview"
     }
 })
