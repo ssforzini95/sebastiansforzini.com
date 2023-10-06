@@ -1,7 +1,6 @@
 <script>
 
 import { doc, getDoc } from "firebase/firestore"
-import db from './firebase/init.js'
 
 export default {
     data() {
