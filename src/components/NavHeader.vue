@@ -11,7 +11,7 @@
             <b-collapse id="nav-collapse" is-nav class="header-align">
                 <b-navbar-nav>
                     <b-nav-item href="#about">About Me</b-nav-item>
-                    <b-nav-item href="#">Skills</b-nav-item>
+                    <b-nav-item href="#skills">Skills</b-nav-item>
                     <b-nav-item href="#">Career</b-nav-item>
                     <b-nav-item href="#testimonial">Testimonials</b-nav-item>
                     <b-nav-item href="#">Contact</b-nav-item>
