@@ -1,65 +1,29 @@
 <script setup>
 
+
 </script>
 
 <template>
 
     <section>
 
-        <b-container>
-            <b-row align-h="center" class="row-am">
-                <b-col class="p-3 col-am">
-
-                    <h1>About Me</h1>
+        <div class="xl:px-[5%] px-[2%] py-16">
+            <div class="flex max-w-full flex-col-reverse md:flex-row justify-center items-center md:gap-5">
+                <div class="p-3 flex-[0_0_auto] w-9/12 md:w-1/3">
+                    <h1 class="mb-3">About Me</h1>
                     <p>
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
                         Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure
                         dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
                         proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
                     </p>
-
-                </b-col>
-                <b-col class="col-am text-center pt-3">
-                    <b-img id="about_me_pic" rounded="circle" src="/sforzini01.webp"></b-img>
-                </b-col>
-            </b-row>
-        </b-container>
+                </div>
+                <div class="flex justify-center flex-[0_0_auto] w-9/12 md:w-1/3 text-center pt-3">
+                    <img id="about_me_pic" class="rounded-full w-60 md:ml-20" src="/sforzini01.webp"/>
+                </div>
+            </div>
+        </div>
 
     </section>
 
 </template>
-
-<style scoped>
-
-    #about_me_pic {
-        width: 15rem;
-    }
-
-    .col-am {
-        flex: 0 0 auto;
-        width: 33.33333333%;
-    }
-
-    @media only screen and (max-width: 1024px) {
-        .col-am {
-            width: 40%;
-        }
-    }
-
-    @media only screen and (max-width: 991px) {
-        .col-am {
-            width: 50%;
-        }
-    }
-
-    @media only screen and (max-width: 768px) {
-        .col-am {
-            width: 100%;
-        }
-
-        .row-am {
-            flex-direction: column-reverse;
-        }
-    }
-
-</style>
