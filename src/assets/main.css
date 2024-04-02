@@ -1,25 +1,19 @@
-@import './base.css';
+@tailwind base;
 
-html {
-    scroll-behavior: smooth;
-}
+@layer base {
+    h1 {
+      @apply text-4xl font-medium;
+    }
+    h2 {
+      @apply text-3xl font-medium;
+    }
+    h3 {
+      @apply text-2xl font-medium;
+    }
+  }
 
-#web_logo {
-    width: 100%;
-}
-
-.scroller::-webkit-scrollbar {
-    width: 8px;
-}
-
-.scroller::-webkit-scrollbar-track {
-    background: white;
-}
-
-.scroller::-webkit-scrollbar-thumb {
-    background: #7f7f7f;
-    border-right: 1px solid white;
-}
+@tailwind components;
+@tailwind utilities;
 
 /*Scrollbar Size*/
 ::-webkit-scrollbar {
@@ -39,13 +33,4 @@ html {
 /*Scrollbar - Hover Color*/
 ::-webkit-scrollbar-thumb:hover {
     background: #537072;
-}
-
-section {
-    padding-top: 1rem;
-    padding-bottom: 1rem;
-}
-
-.progress {
-    height: 1.5rem !important;
 }

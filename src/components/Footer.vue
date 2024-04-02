@@ -1,31 +1,15 @@
-<script setup>
-
-</script>
-
 <template>
 
     <footer>
 
-        <b-row class="dark-bg">
-            <b-col>Copyright ® All rights reserved</b-col>
-            <b-col>
-                Developed With Vue JS <b-img src="/logo.svg" width="15"></b-img>
-                & Bootstrap <b-img src="/bootstrap.webp" width="15"></b-img>
-            </b-col>
-        </b-row>
+        <div class="bg-[#2C4A52] flex flex-col md:flex-row m-0 text-white py-4 px-2 text-center justify-around items-center font-bold">
+            <div>Copyright ® All rights reserved</div>
+            <div class="inline-flex gap-2 items-center">
+                Developed With Vite JS <img src="/vitejs.svg" class="w-5"/>
+                & Tailwind <img src="/tailwind.png" class="w-7 h-5"/>
+            </div>
+        </div>
 
     </footer>
 
 </template>
-
-<style scoped>
-
-    .dark-bg {
-        background-color: #2C4A52 !important;
-        margin: 0;
-        color: white;
-        padding: 1rem 0.5rem;
-        text-align: center;
-    }
-
-</style>

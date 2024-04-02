@@ -1,4 +1,4 @@
-<script setup>
+<script setup lang="ts">
     import { RouterLink, RouterView } from 'vue-router'
     import NavHeader from "./components/NavHeader.vue";
     import Footer from "./components/Footer.vue";
@@ -14,11 +14,8 @@
         <Banner></Banner>
     </header>
     <AboutMe id="about"></AboutMe>
-    <Skills id="skills"></Skills>
+    <hr>
+    <!-- <Skills id="skills"></Skills> -->
     <Testimonial id="testimonial"></Testimonial>
     <Footer></Footer>
 </template>
-
-<style scoped>
-
-</style>
