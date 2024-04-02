@@ -22,7 +22,7 @@ const testimonials = [
 
 <template>
 
-    <section id="testimonial" class="text-center">
+    <section id="testimonial" class="text-center text-white bg-[url('/background-2.jpg')] bg-auto">
         <swiper-container
             :slides-per-view="1"
             :loop="true"
@@ -31,54 +31,14 @@ const testimonials = [
                 delay: 5000
             }"
         >
-            <swiper-slide v-for="testimonial in testimonials">
-                <h2>{{ testimonial.name }}</h2>
-                <b-img class="bg-white" rounded="circle" :src="testimonial.picture"></b-img>
-                <p>{{ testimonial.text }}</p>
+            <swiper-slide v-for="testimonial in testimonials" class="flex flex-col gap-3 lg:gap-0 lg:flex-row items-center py-20 px-16 xl:px-60 lg:px-32">
+                <img class="bg-white rounded-full lg:w-32 lg:h-32 w-40 h-40 float-left mr-4" :src="testimonial.picture"/>
+                <span>
+                    <h1 class="mb-2">{{ testimonial.name }}</h1>
+                    <p class="text-xl">{{ testimonial.text }}</p>
+                </span>
             </swiper-slide>
         </swiper-container>
     </section>
 
 </template>
-
-<style scoped>
-
-    #testimonial {
-        padding: 5rem 20rem;
-        background-color: #8E9B97;
-        color: white;
-    }
-
-    swiper-slide img {
-        width: 5rem;
-        float: left;
-        margin-right: 1rem;
-    }
-
-    @media only screen and (max-width: 1250px) {
-        #testimonial{
-            padding: 5rem 10rem;
-        }
-    }
-
-    @media only screen and (max-width: 690px) {
-        #testimonial{
-            padding: 5rem 5rem;
-        }
-    }
-
-    @media only screen and (max-width: 522px) {
-        swiper-slide img {
-            margin-bottom: 1rem;
-            float: initial;
-            margin-right: 0;
-        }
-    }
-
-    @media only screen and (max-width: 415px) {
-        #testimonial{
-            padding: 5rem 2rem;
-        }
-    }
-
-</style>
