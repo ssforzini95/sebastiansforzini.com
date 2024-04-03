@@ -1,6 +1,10 @@
 <script setup>
 
+import 'swiper/css';
+import 'swiper/css/autoplay';
+
 import { register } from 'swiper/element/bundle';
+import { Autoplay } from 'swiper/modules';
 
 register();
 
@@ -24,12 +28,12 @@ const testimonials = [
 
     <section id="testimonial" class="text-center text-white bg-[url('/background-2.jpg')] bg-auto">
         <swiper-container
-            :slides-per-view="1"
             :loop="true"
-            :css-mode="true"
             :autoplay="{
-                delay: 5000
+                delay: 2500,
+                disableOnInteraction: false,
             }"
+            :modules="[Autoplay]"
         >
             <swiper-slide v-for="testimonial in testimonials" class="flex flex-col gap-3 lg:gap-0 lg:flex-row items-center py-20 px-16 xl:px-60 lg:px-32">
                 <img class="bg-white rounded-full lg:w-32 lg:h-32 w-40 h-40 float-left mr-4" :src="testimonial.picture"/>
