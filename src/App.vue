@@ -15,7 +15,7 @@
     </header>
     <AboutMe id="about"></AboutMe>
     <hr>
-    <!-- <Skills id="skills"></Skills> -->
+    <Skills id="skills"></Skills>
     <Testimonial id="testimonial"></Testimonial>
     <Footer></Footer>
 </template>
