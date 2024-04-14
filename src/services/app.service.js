@@ -24,4 +24,15 @@ export class AppService extends BaseService {
         }
     }
 
+    static async getCareerInformation(){
+        try {
+            const documents = query(collection(this.request(), 'career'));
+            const snapshot = await getDocs(documents);
+            return this.getResponse(snapshot);
+            
+        } catch(error) {
+            console.log(error);
+        }
+    }
+
 }

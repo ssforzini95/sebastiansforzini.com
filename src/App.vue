@@ -6,6 +6,7 @@
     import Banner from "./components/Banner.vue";
     import Testimonial from "./components/Testimonial.vue";
     import Skills from "./components/Skills.vue";
+    import Career from './components/Career.vue';
 </script>
 
 <template>
@@ -14,7 +15,7 @@
         <Banner></Banner>
     </header>
     <AboutMe id="about"></AboutMe>
-    <hr>
+    <Career id="career"></Career>
     <Skills id="skills"></Skills>
     <Testimonial id="testimonial"></Testimonial>
     <Footer></Footer>

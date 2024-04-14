@@ -31,7 +31,7 @@ function classNames(...classes) {
 
 <template>
 
-    <section class="p-12">
+    <section class="py-12 px-10 md:px-56">
 
         <b-container>
             <h2>Skills</h2>
