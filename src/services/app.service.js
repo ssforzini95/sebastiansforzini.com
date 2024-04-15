@@ -35,4 +35,17 @@ export class AppService extends BaseService {
         }
     }
 
+    static async getMaintenanceStatus(){
+        try {
+            const docRef = doc(this.request(), "maintenance", "MTC-001");
+            const docSnap = await getDoc(docRef);
+
+            if(docSnap.exists()) {
+                return docSnap.data();
+            }
+        } catch(error) {
+            console.log(error);
+        }
+    }
+
 }
