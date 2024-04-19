@@ -5,7 +5,7 @@
             
             <div class="mx-auto max-w-[90%] px-1 sm:px-3 lg:px-4">
                 <div class="relative flex h-16 items-center justify-between ">
-                    <div class="absolute inset-y-0 right-0 flex items-center sm:hidden">
+                    <div class="absolute inset-y-0 right-0 flex items-center md:hidden">
 
                         <!-- Mobile menu button-->
                         <DisclosureButton class="relative inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white">
@@ -22,7 +22,7 @@
                         <div class="flex flex-shrink-0 items-center">
                             <img src="/SS_Logo1.png" class="h-12 md:h-12 w-auto" id="web_logo" alt="Logo"/>
                         </div>
-                        <div class="hidden sm:ml-6 sm:block self-center">
+                        <div class="hidden md:ml-6 md:block self-center">
                             <div class="flex space-x-4 ">
                                 <a v-for="item in navigation" :key="item.name" :href="item.href" :class="[item.current ? 'bg-gray-900 text-white' : 'text-gray-500 hover:bg-gray-700 hover:text-white', 'rounded-md px-3 py-2 text-sm font-medium']" :aria-current="item.current ? 'page' : undefined">{{ item.name }}</a>
                             </div>
@@ -33,7 +33,7 @@
             </div>
 
             <!-- Mobile Menu Options -->
-            <DisclosurePanel class="sm:hidden bg-gray-700">
+            <DisclosurePanel class="md:hidden bg-gray-700">
                 <div class="space-y-1 px-2 pb-3 pt-2 self-center">
                     <DisclosureButton 
                         v-for="item in navigation" 
@@ -56,6 +56,6 @@ const navigation = [
   { name: 'Career', href: '#career', current: false },
   { name: 'Skills', href: '#skills', current: false },
   { name: 'Testimonials', href: '#testimonial', current: false },
-  { name: 'Contact', href: '#', current: false },
+  { name: 'Contact', href: '#contact', current: false },
 ]
 </script>

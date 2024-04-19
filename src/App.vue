@@ -33,6 +33,6 @@
         <Career id="career"></Career>
         <Skills id="skills"></Skills>
         <Testimonial id="testimonial"></Testimonial>
-        <Footer></Footer>
+        <Footer id="contact"></Footer>
     </template>
 </template>
