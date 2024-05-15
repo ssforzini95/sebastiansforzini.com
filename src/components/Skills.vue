@@ -33,8 +33,7 @@ function classNames(...classes) {
 
     <section class="py-12 px-10 md:px-56">
 
-        <b-container>
-            <h2>Skills</h2>
+        <h2>Skills</h2>
             <p>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
                 Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure
@@ -75,7 +74,6 @@ function classNames(...classes) {
                     </template>
                 </TabGroup>
             </div>
-        </b-container>
 
     </section>
 

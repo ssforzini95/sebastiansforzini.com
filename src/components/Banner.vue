@@ -6,7 +6,7 @@
     const text = {
         title: "I'm SEBASTIAN SFORZINI",
         prg1: "Welcome to my website!! I'm a full stack developer with more than 8 years of experience.",
-        prg2: "Everything you see was coded by me using Vue JS and Bootstrap.",
+        prg2: "Everything you see was coded by me using Vue JS and Tailwind.",
         prg3: "Feel free to contact me by email or by any social media!"
     };
 
@@ -73,7 +73,7 @@
                 <p class="w-fit h-fit border-r-2 border-r-transparent border-solid font-mono">{{ prg1.text }}</p>
                 <p class="w-fit h-fit border-r-2 border-r-transparent border-solid font-mono">{{ prg2.text }}</p>
                 <p class="w-fit h-fit border-r-2 border-r-transparent border-solid font-mono">{{ prg3.text }}</p>
-                <AppButton :class="[(contactMeButton) ? 'opacity-100' : 'opacity-0', 'transition-opacity ease-in-out delay-150 duration-300']">Contact Me</AppButton>
+                <AppButton :class="[(contactMeButton) ? 'opacity-100' : 'opacity-0', 'transition-opacity ease-in-out delay-150 duration-300']" link="#contact">Contact Me</AppButton>
             </div>
         </div>
 
