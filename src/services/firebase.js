@@ -1,6 +1,6 @@
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";
-import { getAuth, createUserWithEmailAndPassword } from "firebase/auth";
+import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
 import { getFirestore } from "firebase/firestore";
 
 export class Firebase {
@@ -23,7 +23,7 @@ export class Firebase {
         const db = getFirestore(app);
         const auth = getAuth();
         
-        createUserWithEmailAndPassword(auth, import.meta.env.FIREBASE_EMAIL, import.meta.env.FIREBASE_PASSWORD)
+        signInWithEmailAndPassword(auth, import.meta.env.VITE_FIREBASE_EMAIL, import.meta.env.VITE_FIREBASE_PASSWORD)
         .then((userCredential) => {
             // Signed up 
             this.user = userCredential.user;
