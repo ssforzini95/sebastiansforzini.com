@@ -1,68 +1,80 @@
-<script>
+<script setup>
 
 import { doc, getDoc } from "firebase/firestore"
+import { TabGroup, TabList, Tab, TabPanels, TabPanel } from '@headlessui/vue'
+import AppProgressBar from "./general/AppProgressBar.vue";
 
-export default {
-    data() {
-        return {
-            max: 100,
-            variants: [
-                "primary",
-                "secondary",
-                "success",
-                "warning",
-                "danger",
-                "info",
-                "dark"
-            ],
-            skills: []
-        }
+const max = 100;
+const variants = ["danger", "warning", "success", "info", "custom", "secondary", "fuchsia", "yellow"];
+const skills = [
+    {
+        "name": "Backend",
+        "items": [
+            { "name": "PHP", "value": 90 },
+            { "name": "Java", "value": 70 },
+        ]
     },
+    {
+        "name": "Frontend",
+        "items": [
+            { "name": "Javascript", "value": 90 },
+            { "name": "Vue", "value": 80 },
+        ]
+    }
+];
+
+function classNames(...classes) {
+  return classes.filter(Boolean).join(' ')
 }
+
 </script>
 
 <template>
 
-    <section class="p-5">
+    <section class="py-12 px-10 md:px-56">
 
-        <b-container>
-            <h2>Skills</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        <h2>Skills</h2>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
                 Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure
                 dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-                proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-            <!-- <b-card no-body>
-                <b-tabs pills card vertical nav-wrapper-class="w-25">
-                    <b-tab v-for="(skill, index) in skills" :active="(index === 0)" :title="skill.name">
-                        <b-card-text>
-                            <b-row v-for="item in skill.items">
-                                <b-col cols="2">
-                                    <h3>{{ item.name }}</h3>
-                                </b-col>
-                                <b-col>
-                                    <b-progress :max="max" animated show-progress>
-                                        <b-progress-bar
-                                            :value="item.value"
-                                            :variant="variants[Math.floor(Math.random() * variants.length)]"
-                                            :label="`${((item.value / max) * 100).toFixed(2)}%`"
-                                        ></b-progress-bar>
-                                    </b-progress>
-                                </b-col>
-                            </b-row>
-                        </b-card-text>
-                    </b-tab>
-                </b-tabs>
-            </b-card> -->
-        </b-container>
+                proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            </p>
+            <div class="p-8 bg-gray-100 border-gray-200 border-solid border-2 rounded-xl shadow-2xl my-5">
+                <TabGroup>
+                    <template class="flex">
+                        <TabList class="flex flex-col rounded-l-xl space-x-1 bg-[#2C4A52] p-5">
+                            <Tab v-for="skill in skills" as="template" v-slot="{ selected }">
+                                <button :class="[
+                                    'w-40 rounded-lg p-2.5 text-sm font-medium leading-5',
+                                    'ring-white/60 ring-offset-2 ring-offset-blue-800 focus:outline-none focus:ring-2',
+                                    selected
+                                        ? 'bg-white text-blue-700 focus:outline-none'
+                                        : 'text-blue-100 hover:bg-white/[0.12] hover:text-white focus:outline-none',
+                                    ]">
+                                    {{ skill.name }}
+                                </button>
+                            </Tab>
+                        </TabList>
+
+                        <TabPanels class="p-3 border-[#2C4A52] border-solid rounded-r-xl border-2 w-full ">
+                            <TabPanel v-for="skill in skills" :class="[
+                                'rounded-xl bg-white p-3',
+                                'ring-white/60 ring-offset-2 ring-offset-blue-400 focus:outline-none focus:ring-2',
+                            ]">
+                                <template v-for="item in skill.items">
+                                    <div class="flex gap-4 mb-2">
+                                        <h5 class="w-[15%] font-bold">{{ item.name }}</h5>
+                                        <AppProgressBar :type="variants[Math.floor(Math.random() * variants.length)]" :value="item.value" class="w-full"></AppProgressBar>
+                                    </div>
+                                </template>
+                            </TabPanel>
+                            
+                        </TabPanels>
+                    </template>
+                </TabGroup>
+            </div>
 
     </section>
 
 </template>
-
-<style scoped>
-
-    .progress-bar {
-        font-weight: bold;
-    }
-
-</style>
